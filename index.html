@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title> Venezuela Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="intro">
+    <h1>Welcome to my quiz</h1>
+    <h2 id="headerText"> What is your name?</h2> <br>
+</div>
+
+<div id="greetingInput">
+    <input id="userName"> <br><br>
+    <button onclick="greeting()">Submit</button>
+
+
+</div>
+
+<div id="quiz">
+    <h3 id="question">Question1: What is the capital of Venezuela?</h3>
+    <div id="answerA" onclick> Bogota</div>
+    <div id="answerB"> Caracas</div>
+    <div id="answerC"> Medellin</div>
+    <div id="answerD"> Santiago</div> <br>
+
+
+    <div id="Question1Button"><button>Submit Question 1</button></div>
+
+</div>
+
+<style>
+    #intro {text-align: center; color: floralwhite}
+    #greetingInput {text-align: center; color: floralwhite;}
+    #quiz {text-align: center; color: floralwhite;}
+    body {background-color: lightpink;}
+</style>
+
+<script>
+    let userName = document.querySelector("#userName");
+    let headerText = document.querySelector("#headerText");
+    let greetingInput = document.querySelector("#greetingInput");
+    let quiz = document.querySelector("#quiz");
+    let answerA = document.querySelector("#answerA");
+    let answerB = document.querySelector("#answerB");
+    let answerC = document.querySelector("#answerC");
+    let answerD = document.querySelector("#answerD");
+
+    quiz.style.display = "none";
+
+    
+
+    function greeting() {
+        headerText.innerHTML = ""
+        headerText.innerHTML = "Hello " + userName.value + " Welcome to my Quiz";
+        greetingInput.style.display = "none"
+        quiz.style.display = "block";
+    }
+</script>
