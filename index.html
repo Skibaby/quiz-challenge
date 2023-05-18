@@ -16,21 +16,19 @@
 <div id="greetingInput">
     <input id="userName"> <br><br>
     <button onclick="greeting()">Submit</button>
-
+    <button id="next-btn" onclick="nextQuestion()">Next</button>
 
 </div>
 
 <div id="quiz">
-    <h3 id="question">Question1: What is the capital of Venezuela?</h3>
-    <div id="answerA" onclick> Bogota</div>
-    <div id="answerB"> Caracas</div>
-    <div id="answerC"> Medellin</div>
-    <div id="answerD"> Santiago</div> <br>
+    <h3 id="question"></h3>
+    <div id="answer-buttons"></div>
 
 
-    <div id="Question1Button"><button>Submit Question 1</button></div>
 
+    <div id="result"></div>
 </div>
+
 
 <style>
     #intro {text-align: center; color: floralwhite}
@@ -40,23 +38,24 @@
 </style>
 
 <script>
-    let userName = document.querySelector("#userName");
-    let headerText = document.querySelector("#headerText");
-    let greetingInput = document.querySelector("#greetingInput");
-    let quiz = document.querySelector("#quiz");
-    let answerA = document.querySelector("#answerA");
-    let answerB = document.querySelector("#answerB");
-    let answerC = document.querySelector("#answerC");
-    let answerD = document.querySelector("#answerD");
+    // let userName = document.querySelector("#userName");
+    // let headerText = document.querySelector("#headerText");
+    // let greetingInput = document.querySelector("#greetingInput");
+    // let quiz = document.querySelector("#quiz");
+    // let answerA = document.querySelector("#answerA");
+    // let answerB = document.querySelector("#answerB");
+    // let answerC = document.querySelector("#answerC");
+    // let answerD = document.querySelector("#answerD");
 
-    quiz.style.display = "none";
+    // quiz.style.display = "none";
 
     
 
-    function greeting() {
-        headerText.innerHTML = ""
-        headerText.innerHTML = "Hello " + userName.value + " Welcome to my Quiz";
-        greetingInput.style.display = "none"
-        quiz.style.display = "block";
-    }
+    // function greeting() {
+    //     headerText.innerHTML = ""
+    //     headerText.innerHTML = "Hello " + userName.value + " Welcome to my Quiz";
+    //     greetingInput.style.display = "none"
+    //     quiz.style.display = "block";
+    // }
 </script>
+<script src="assets/js/script.js"></script>
